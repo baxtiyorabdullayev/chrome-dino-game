@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  background-color: #44518f;
+}
+
+.container {
+  margin: 20px auto;
+  width: 700px;
+  height: 200px;
+  background-color: #8991b7;
+  position: relative;
+  overflow: hidden;
+}
+
+/* dragon  */
+.dragon {
+  width: 60px;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  z-index: 2;
+  transition: 2s;
+}
+
+/* tree  */
+.tree {
+  width: 20px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation-name: muve;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes muve {
+  from {
+    right: -30px;
+  }
+  to {
+    right: 710px;
+  }
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px;
+  width: 80px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: none;
+}

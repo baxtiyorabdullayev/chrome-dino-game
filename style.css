@@ -32,10 +32,20 @@ body {
 .tree {
   width: 20px;
   height: 40px;
-  position: absolute;
   bottom: 0;
-  right: 0;
   animation-name: muve;
+}
+
+.bird {
+  width: 50px;
+  bottom: 120px;
+  animation-name: muve;
+  animation-delay: 0.9s;
+}
+
+.tree,
+.bird {
+  position: absolute;
   animation-duration: 3.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;

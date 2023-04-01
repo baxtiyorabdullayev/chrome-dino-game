@@ -1,9 +1,29 @@
 "use strict";
 
-const up = document.querySelector(".up");
-const down = document.querySelector(".down");
-const dragon = document.querySelector(".dragon");
-const tree = document.querySelector(".tree");
+let body = document.querySelector("body");
+
+let conteiner = document.createElement("div");
+conteiner.className = "container";
+
+let dragon = document.createElement("img");
+dragon.src = "./dragon.png";
+dragon.className = "dragon";
+
+let tree = document.createElement("img");
+tree.src = "./tree.png";
+tree.className = "tree";
+
+let bird = document.createElement("img");
+bird.src = "./bird.png";
+bird.className = "bird";
+
+let up = document.createElement("button");
+up.className = "up";
+up.textContent = "UP";
+
+let down = document.createElement("button");
+down.className = "down";
+down.textContent = "DOWN";
 
 function uping() {
   dragon.style.bottom = "1px";
@@ -26,3 +46,10 @@ function downing() {
 }
 
 down.addEventListener("click", downing);
+
+conteiner.appendChild(bird);
+conteiner.appendChild(tree);
+conteiner.appendChild(dragon);
+body.appendChild(conteiner);
+body.appendChild(up);
+body.appendChild(down);
